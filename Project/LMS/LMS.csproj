@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D34E48E4-140F-4CFD-A6A1-22FC3A14A0C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMS</RootNamespace>
+    <AssemblyName>LMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OOP.DL">
+      <HintPath>D:\New folder (4)\pos\POS\POS\bin\Debug\OOP.DL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\addbook.cs" />
+    <Compile Include="BL\addmember.cs" />
+    <Compile Include="BL\bbook.cs" />
+    <Compile Include="DC\DBHelper.cs" />
+    <Compile Include="LMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LMSDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMSDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UL\Adbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UL\Adbook.Designer.cs">
+      <DependentUpon>Adbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UL\AddMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UL\AddMember.Designer.cs">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UL\borrowbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UL\borrowbook.Designer.cs">
+      <DependentUpon>borrowbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UL\home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UL\home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UL\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UL\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UL\splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UL\splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UL\Submitbooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UL\Submitbooks.Designer.cs">
+      <DependentUpon>Submitbooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UL\Viewborrowbooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UL\Viewborrowbooks.Designer.cs">
+      <DependentUpon>Viewborrowbooks.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UL\Adbook.resx">
+      <DependentUpon>Adbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UL\AddMember.resx">
+      <DependentUpon>AddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UL\borrowbook.resx">
+      <DependentUpon>borrowbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UL\home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UL\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UL\splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UL\Submitbooks.resx">
+      <DependentUpon>Submitbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UL\Viewborrowbooks.resx">
+      <DependentUpon>Viewborrowbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="LMSDataSet1.xsc">
+      <DependentUpon>LMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LMSDataSet1.xss">
+      <DependentUpon>LMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LMSDataSet11.xsc">
+      <DependentUpon>LMSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="LMSDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LMSDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LMSDataSet11.xss">
+      <DependentUpon>LMSDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
